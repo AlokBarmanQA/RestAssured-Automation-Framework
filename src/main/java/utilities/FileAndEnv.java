@@ -46,10 +46,10 @@ public class FileAndEnv {
 		return map;
 	}
 	
-	public static Map<String, String> getConfigReader(){
-		if(map == null) {
-			map = envAndFile();
-		}
-		return map;
-	}
+//	public static Map<String, String> getConfigReader(){
+//		if(map == null) {
+//			map = envAndFile();
+//		}
+//		return map;
+//	}
 }
