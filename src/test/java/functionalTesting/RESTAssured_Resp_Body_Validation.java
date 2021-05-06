@@ -27,7 +27,7 @@ public class RESTAssured_Resp_Body_Validation {
 //	    ResponseBody body = response.getBody();
 	    
 	    // Get Response Body as String 
-	    String bodyStringValue = response.asString();
+	    String bodyStringValue = response.getBody().asString();
 
 	    // Validate if Response Body Contains a specific String
 	    Assert.assertTrue(bodyStringValue.contains("firstName"));

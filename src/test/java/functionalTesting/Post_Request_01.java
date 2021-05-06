@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
@@ -14,11 +15,12 @@ public class Post_Request_01 {
 		RestAssured.baseURI = "https://reqres.in/api/users";
 		
 		Response response = RestAssured.given()
-							.body("{\r\n" + 
-									"    \"name\": \"alok\",\r\n" + 
-									"    \"job\": \"sdet\"\r\n" + 
-									"}")
-							.post();
+															.contentType(ContentType.JSON)
+															.body("{\r\n" + 
+																	"    \"name\": \"alok\",\r\n" + 
+																	"    \"job\": \"sdet\"\r\n" + 
+																	"}")
+															.post();
 		
 		JsonPath extract = response.jsonPath();
 		String name = extract.get("name");

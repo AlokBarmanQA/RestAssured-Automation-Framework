@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class POST_API_Payload {
 	
-	public Map<String, Object> POST_Request_Payload(int id, String FirstName, String LastName, int SubjectID){
+	public Map<String, Object> post_request_payload(int id, String FirstName, String LastName, int SubjectID){
 		Map<String, Object> payload = new HashMap<String, Object>();
 		payload.put("id", id);
 		payload.put("FirstName", FirstName);

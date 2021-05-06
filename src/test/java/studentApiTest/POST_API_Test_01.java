@@ -25,7 +25,7 @@ public class POST_API_Test_01 extends TestBase{
 		
 		Response response = RestAssured.given()
 							.when().headers(headerObj.defaultHeaders())
-										.body(payloadObj.POST_Request_Payload(Integer.parseInt(JavaUtilities.generateRandomNumber()), 
+										.body(payloadObj.post_request_payload(Integer.parseInt(JavaUtilities.generateRandomNumber()), 
 												JavaUtilities.generateRandomString(), JavaUtilities.generateRandomString(), Integer.parseInt("4")))
 										.post(APIEnpoints.allAPIEndpoints.CREATE_SINGLE_USER);
 		
